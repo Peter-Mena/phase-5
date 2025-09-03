@@ -44,3 +44,11 @@ jobs -l
  task 4: Find the PID of the process, inspect file descriptors in /proc/<pid>/fd.
  python3 ~/iot_logger/scripts/sensor_script.py > ~/iot_logger/logs/temperature.log 2>&1 &
  ls -l /proc/22694/fd
+ 
+task 5: Filter log data into another file.
+
+task 6: Use wildcards to copy logs to data/.
+cp ~/iot_logger/logs/*.log ~/iot_logger/data/
+
+task 7: Clear variable when done.
+unset temp_sensor
