@@ -1,0 +1,3 @@
+task 1: Set an environment variable for sensor type.
+export temp_sensor=temperature
+echo $temp_sensor  #to show its value
