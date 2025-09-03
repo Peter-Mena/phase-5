@@ -1,0 +1,17 @@
+Q1: What’s the difference between ' ' and " " in shell?
+Single quotes: Preserve literal value, no variable expansion or command substitution
+Double quotes: : Allow variables and commands to be expanded.
+
+Q2: Explain [ -f filename ] vs [ -d dirname ].
+-f filename: Checks if a file exists and is a regular file
+-d dirname: Checks if a directory exists
+
+Q3: Explain stdout/stderr redirection, appending vs overwrite. How can you confirm redirection using file descriptors?
+stdout: Standard Output, FD 1
+stderr: Standard Error, FD 2
+> file : redirect the output and overwrite on the file
+>> file: redirect the output and append to the file
+2> file : redirect the error and overwrite on the file
+2>> file: redirect the error and append to the file
+we can confirm stdout/stderr redirection by:
+/proc/<PID>/fd/
