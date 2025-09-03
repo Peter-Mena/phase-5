@@ -41,4 +41,6 @@ jobs -l
  sudo chmod 777 temperature.log 
  cat ~/iot_logger/logs/temperature.log
 
- 
+ task 4: Find the PID of the process, inspect file descriptors in /proc/<pid>/fd.
+ python3 ~/iot_logger/scripts/sensor_script.py > ~/iot_logger/logs/temperature.log 2>&1 &
+ ls -l /proc/22694/fd
