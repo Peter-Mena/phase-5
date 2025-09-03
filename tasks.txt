@@ -32,3 +32,13 @@ nano sensor_script.py
 cd 
 python3 ~/iot_logger/scripts/sensor_script.py
 cat ~/iot_logger/logs/sensor.log
+
+task 3: Redirect script output to logs/temperature.log while running as a background process.
+python3 ~/iot_logger/scripts/sensor_script.py > ~/iot_logger/logs/temperature.log 2>&1 &
+jobs -l
+ cd iot_logger/
+ cd logs/
+ sudo chmod 777 temperature.log 
+ cat ~/iot_logger/logs/temperature.log
+
+ 
